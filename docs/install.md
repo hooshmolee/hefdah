@@ -28,6 +28,8 @@ python scripts/install.py --target .agents/skills --main-only
 
 مخزن manifest و marketplace دارد. پس از دریافت در پوشه `hefdah`، در محیط دارای Claude Code:
 
+برای مخزن عمومی می‌توان از `claude plugin marketplace add hooshmolee/hefdah` و سپس `claude plugin install hefdah@hefdah` استفاده کرد. نتیجه شناسایی و اجرا را در میزبان خود بررسی کن.
+
 ```sh
 claude plugin validate ./hefdah
 claude plugin marketplace add ./hefdah
