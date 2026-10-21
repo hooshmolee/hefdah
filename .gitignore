@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.validation-deps/
+.env
+.env.*
+*.pem
+*.key
+clients/
+dist/
+tmp*/
+.DS_Store
+Thumbs.db

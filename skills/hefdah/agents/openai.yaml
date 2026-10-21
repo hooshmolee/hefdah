@@ -1,0 +1,4 @@
+interface:
+  display_name: "هفده | hefdah"
+  short_description: "محتوای فارسی اینستاگرام، با لحن خودت"
+  default_prompt: "با $hefdah برای پیجم محتوای فارسی با لحن خودم بساز."

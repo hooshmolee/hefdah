@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "checked_at": "2026-10-21",
+  "rules": [
+    {"id": "caption_preview", "value": 125, "status": "approximation", "source": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/main/skills/ig-caption/caption.py", "note": "وابسته به دستگاه و محل نمایش؛ قانون قطعی نیست"},
+    {"id": "caption_length", "value": 2200, "status": "upstream_reference_not_independently_verified", "source": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/main/skills/ig-caption/caption.py", "note": "فقط هشدار؛ محدودیت مقصد در اپ بررسی شود"},
+    {"id": "hashtag_advice", "value": 5, "status": "editorial_default_not_hard_limit", "source": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/main/skills/ig-caption/caption.py", "note": "پیشنهاد چند هشتگ مرتبط؛ سقف حساب در این نسخه مستقلاً تأیید نشده"},
+    {"id": "carousel_canvas", "value": [1080, 1350], "status": "design_preset_not_platform_requirement", "source": null, "note": "قالب پیشنهادی ۴:۵؛ crop مقصد باید دیده شود"},
+    {"id": "profile_field_limits", "value": null, "status": "verify_in_destination", "source": null},
+    {"id": "dm_automation", "value": null, "status": "not_implemented", "source": null}
+  ]
+}

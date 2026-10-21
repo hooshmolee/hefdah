@@ -1,0 +1,19 @@
+Hefdah / هفده — Persian Instagram content skill pack, version 0.1.0.
+Website: https://17studio.ir
+
+Inspired by and adapting the workflow structure of:
+https://github.com/Jakeschincariol/instagram-agent-skill
+Author: Jake Schincariol. License: MIT.
+Upstream revision observed on 2026-10-21:
+d03c56bb598be770c60b201f94237e5d1a4268a6
+
+Hefdah changes: Persian instructions and examples; one entrypoint and 13 modes;
+conservative Unicode handling; Persian number parsing; explicit per-client
+context; editorial diagnostics without AI-authorship or virality prediction;
+RTL HTML carousel; chat bundle and additive installer.
+Python helpers are newly implemented for this package, not a translated copy
+of the upstream scripts. Hook IDs are Hefdah-local, not an upstream classifier map.
+Sample texts and figures are demonstrations, not client outcomes.
+
+Not affiliated with Instagram, Meta, OpenAI, or Anthropic.
+Third-party content, trademarks and fonts retain their separate rights.

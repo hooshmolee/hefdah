@@ -1,0 +1,8 @@
+{
+  "name": "hefdah",
+  "description": "ابزارهای فارسی ساخت محتوای اینستاگرام از هفده",
+  "owner": {"name": "Hefdah"},
+  "plugins": [
+    {"name": "hefdah", "source": "./", "description": "محتوای فارسی اینستاگرام با صدای خودت"}
+  ]
+}

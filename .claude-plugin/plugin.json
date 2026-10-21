@@ -1,0 +1,9 @@
+{
+  "name": "hefdah",
+  "version": "0.1.0",
+  "description": "دستیار فارسی ساخت محتوای اینستاگرام، با لحن خودت؛ ۱۳ قابلیت و ابزارهای محلی",
+  "author": {"name": "Hefdah", "url": "https://17studio.ir"},
+  "homepage": "https://17studio.ir",
+  "license": "MIT",
+  "keywords": ["persian", "farsi", "instagram", "content", "hefdah"]
+}
