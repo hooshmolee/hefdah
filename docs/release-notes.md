@@ -19,6 +19,8 @@
 
 تست محلی Windows: ۲۰ پاس و یک skip مرتبط با مجوز symlink. ساختار ۱۴ اسکیل و manifest/marketplace با ابزار واقعی اعتبارسنجی شدند. نسخه ۰٫۱٫۱ خطای encoding ویندوز در نسخه نخست را رفع می‌کند. وضعیت آزمون چندسیستمی در [Actions](https://github.com/hooshmolee/hefdah/actions) قابل مشاهده است.
 
+[هر شش ترکیب CI نسخه ۰٫۱٫۱](https://github.com/hooshmolee/hefdah/actions/runs/39661426346) با Windows/macOS/Linux و Python 3.10/3.12 موفق شدند.
+
 نسخه آزمایشی است؛ پایلوت اینفلوئنسر و ارزیابی مستقل کیفیت در Claude/ChatGPT هنوز انجام نشده‌اند. زمان گفتار تخمینی است؛ ابزارها رشد یا وایرال‌شدن را پیش‌بینی نمی‌کنند. هیچ پست یا پیامی ارسال نمی‌شود.
 
 ساخته‌شده توسط [هفده](https://17studio.ir). الهام‌گرفته از instagram-agent-skill اثر Jake Schincariol، با مجوز MIT و حفظ منشأ.

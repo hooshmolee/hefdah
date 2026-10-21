@@ -6,6 +6,7 @@
 
 - Windows، Python 3.12.14: مجموعه `python -X utf8 -m unittest discover -s tests -v` شامل ۲۱ تست؛ ۲۰ پاس و یک skip به علت نبود مجوز ایجاد symlink در محیط محدود. تست‌های عدد، حفظ نیم‌فاصله/emoji/لینک، کنترل جهت، CTA فارسی، مقدار غایب/صفر، جداسازی برند، XSS قالب، نصب بدون بازنویسی و اجرای ZIP پس از استخراج پوشش داده شدند.
 - نخستین CI مشکل encoding در نصب Windows را نشان داد؛ در ۰٫۱٫۱ با تعیین صریح UTF-8 و آزمون اجباری cp1252 اصلاح شد. اجرای دوباره شش ترکیب سیستم‌عامل/نسخه Python باید از Actions بررسی شود.
+- [اجرای CI نسخه ۰٫۱٫۱](https://github.com/hooshmolee/hefdah/actions/runs/39661426346) روی commit `3b9c856`: هر شش ترکیب Windows/macOS/Linux با Python 3.10 و 3.12 موفق شدند؛ تست symlink نیز در runner ویندوز اجرا شد.
 - اعتبارسنج استاندارد skill-creator روی هر ۱۴ پوشه: معتبر. ورودی اصلی + ۱۳ میان‌بر؛ ۱۳ حالت کاربردی.
 - `claude plugin validate .claude-plugin/plugin.json`: پاس. `claude plugin validate .`: marketplace پاس بدون هشدار پس از افزودن توضیح.
 - فایل چت و میان‌برها با `scripts/build_release.py --check` مطابق منابع اصلی‌اند.
