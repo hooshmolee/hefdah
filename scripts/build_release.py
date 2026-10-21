@@ -8,7 +8,7 @@ import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 MODES = {
     'reel': ('ریلز', 'Write Persian Reels, hooks and spoken video scripts.'),
     'viral': ('تحقیق الگوها', 'Research supplied Instagram examples and compare account-relative performance.'),
@@ -30,7 +30,7 @@ def chat_bundle(root):
     skill = root / 'skills' / 'hefdah'
     text = (skill / 'SKILL.md').read_text(encoding='utf-8')
     text = re.sub(r'\A---\n.*?\n---\n', '', text, count=1, flags=re.S)
-    parts = ['# HEFDAH CHAT — نسخه گفت‌وگویی ۰٫۱٫۰\n\nاین فایل را در گفت‌وگو بارگذاری/کپی کن و بگو «با هفده شروع کن». این فایل راهنماست؛ خودبه‌خود نصب ماندگار یا ابزار اجرایی ایجاد نمی‌کند. منابع لازم پایین همین فایل آمده‌اند. در نبود اجرای محلی، کار نوشتاری انجام بده و بررسی ابزار را انجام‌شده اعلام نکن.\n', text]
+    parts = ['# HEFDAH CHAT — نسخه گفت‌وگویی ۰٫۱٫۱\n\nاین فایل را در گفت‌وگو بارگذاری/کپی کن و بگو «با هفده شروع کن». این فایل راهنماست؛ خودبه‌خود نصب ماندگار یا ابزار اجرایی ایجاد نمی‌کند. منابع لازم پایین همین فایل آمده‌اند. در نبود اجرای محلی، کار نوشتاری انجام بده و بررسی ابزار را انجام‌شده اعلام نکن.\n', text]
     for mode, (title, _) in MODES.items():
         parts.append(f'\n---\n## حالت {title}\n\n' + (skill / 'references' / f'{mode}.md').read_text(encoding='utf-8'))
     for filename in ['hooks.json', 'profile-rubrics.json', 'style.json', 'platform-rules.json']:

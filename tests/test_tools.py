@@ -1,6 +1,7 @@
 """Observable regressions: Unicode damage, misleading metrics and cross-brand reads."""
 import importlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -125,6 +126,11 @@ class Tools(unittest.TestCase):
         result = subprocess.run([sys.executable, '-X', 'utf8', str(SCRIPTS / 'hefdah.py'), 'beats', '-', '--wpm', '0'], input='متن', text=True, capture_output=True, encoding='utf-8')
         self.assertEqual(result.returncode, 2)
         self.assertNotIn('Traceback', result.stderr)
+
+    def test_cli_uses_utf8_even_when_windows_pipe_uses_legacy_encoding(self):
+        result = subprocess.run([sys.executable, str(SCRIPTS / 'hefdah.py'), 'caption', '-'], input='ذخیره کن\n#آموزش', text=True, capture_output=True, encoding='utf-8', errors='replace', env=dict(os.environ, PYTHONIOENCODING='cp1252'))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout)['hashtags'], ['#آموزش'])
 
 
 if __name__ == '__main__':

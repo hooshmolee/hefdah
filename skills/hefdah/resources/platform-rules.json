@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "checked_at": "2026-10-21",
   "rules": [
     {"id": "caption_preview", "value": 125, "status": "approximation", "source": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/main/skills/ig-caption/caption.py", "note": "وابسته به دستگاه و محل نمایش؛ قانون قطعی نیست"},

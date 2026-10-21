@@ -1,5 +1,6 @@
 """Broken packaging loses workflows; installation must preserve existing skills."""
 import importlib.util
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -46,11 +47,12 @@ class Distribution(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             target = Path(folder) / 'my skills'
             args = [sys.executable, str(script), '--target', str(target)]
-            first = subprocess.run(args, text=True, capture_output=True, encoding='utf-8')
+            environment = dict(os.environ, PYTHONIOENCODING='cp1252')
+            first = subprocess.run(args, text=True, capture_output=True, encoding='utf-8', env=environment)
             self.assertEqual(first.returncode, 0, first.stderr)
             marker = target / 'hefdah' / 'assets' / 'private-note.txt'
             marker.write_text('do not change', encoding='utf-8')
-            second = subprocess.run(args, text=True, capture_output=True, encoding='utf-8')
+            second = subprocess.run(args, text=True, capture_output=True, encoding='utf-8', env=environment)
             self.assertEqual(second.returncode, 2)
             self.assertEqual(marker.read_text(encoding='utf-8'), 'do not change')
 
