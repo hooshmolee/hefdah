@@ -133,5 +133,23 @@ class Tools(unittest.TestCase):
         self.assertEqual(json.loads(result.stdout)['hashtags'], ['#آموزش'])
 
 
+class ContentQualityTests(unittest.TestCase):
+    ROOT = Path(__file__).resolve().parents[1]
+
+    def test_hook_examples_are_usable(self):
+        hooks = json.loads((self.ROOT / 'skills/hefdah/resources/hooks.json').read_text(encoding='utf-8'))['hooks']
+        self.assertEqual(len(hooks), 26)
+        for hook in hooks:
+            self.assertGreater(len(hook['example']), 25, hook['id'])
+            self.assertNotIn('کامل شود', hook['example'], hook['id'])
+
+    def test_first_output_and_quality_rules_present(self):
+        skill = (self.ROOT / 'skills/hefdah/SKILL.md').read_text(encoding='utf-8')
+        self.assertIn('## قاعده خروجی اول', skill)
+        self.assertIn('## استاندارد کیفیت', skill)
+        chat = (self.ROOT / 'HEFDAH-CHAT.md').read_text(encoding='utf-8')
+        self.assertIn('## استاندارد کیفیت', chat)
+
+
 if __name__ == '__main__':
     unittest.main()
